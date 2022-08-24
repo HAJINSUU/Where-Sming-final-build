@@ -12,7 +12,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	SELECT MV_SEQ, CMT_CONTENT, MB_NICK, CMT_DATE, CMT_LIKES
 	FROM T_COMMENT
 	WHERE MV_SEQ = #{mv_seq}
-	ORDER BY CMT_DATE ASC
+	ORDER BY CMT_LIKES DESC
 	</select>
 	<select id="selectCount" parameterType="int">
 	SELECT COUNT(*)
